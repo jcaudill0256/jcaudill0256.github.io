@@ -1,5 +1,5 @@
 /* Jonathan Caudill
-   styles.css 
+   Updated Portfolio Styles - Mobile Friendly + Modernized
 */
 
 /* ========== CSS RESET ========== */
@@ -13,14 +13,16 @@
 body {
     background-color: #f4f4f9;
     font-family: 'Verdana', 'Arial', sans-serif;
-    color: #1f2937; /* dark slate */
+    color: #1f2937;
     line-height: 1.6;
+    padding: 0;
 }
 
 img, video {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     display: block;
+    margin: 1rem auto;
 }
 
 .rounded-corners {
@@ -35,21 +37,21 @@ h1, h3 {
 
 h1 {
     font-family: "Emblema One", system-ui;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #1f2937;
 }
 
 h3 {
     font-family: "Lora", serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 400;
     color: #374151;
 }
 
 /* ========== NAVIGATION ========== */
 nav {
-    background-color: #1e3a8a; /* deep navy blue */
-    padding: 0.75em 0;
+    background-color: #1e3a8a;
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -58,49 +60,48 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
-    margin: 0 1em;
+    display: block;
+    margin: 0.5em 0;
 }
 
 nav a {
+    display: block;
+    padding: 0.75em 1em;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.25em;
     font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    color: #3b82f6; /* light blue hover */
+    background-color: #3b82f6;
+    border-radius: 5px;
 }
 
-/* Mobile Nav */
-.mobile-nav a {
-    display: block;
-    color: #fff;
-    font-size: 1.5em;
-    text-align: center;
-    text-decoration: none;
-    padding: 1rem;
-}
+/* Responsive horizontal nav for larger screens */
+@media (min-width: 768px) {
+    nav li {
+        display: inline-block;
+        margin: 0 1em;
+    }
 
-.mobile-nav a.nav-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
+    nav a {
+        font-size: 1.1em;
+        padding: 0.5em 1em;
+    }
 }
 
 /* ========== MAIN CONTENT ========== */
 main {
     padding: 2rem;
     background-color: #ffffff;
-    color: #1f2937;
 }
 
 main p {
-    font-size: 1.2em;
+    font-size: 1.15em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 main ul {
@@ -110,6 +111,8 @@ main ul {
 
 main h3 {
     margin-top: 2rem;
+    font-size: 1.4em;
+    text-align: center;
 }
 
 .link {
@@ -130,14 +133,15 @@ main h3 {
 figure {
     border: 4px solid #1e293b;
     box-shadow: 6px 6px 10px rgba(100, 116, 139, 0.2);
-    max-width: 400px;
+    max-width: 90%;
     margin: 2rem auto;
+    text-align: center;
 }
 
 figcaption {
     padding: 1em;
     border-top: 4px solid #1e293b;
-    text-align: center;
+    font-style: italic;
 }
 
 /* ========== CONTACT / INFO ========== */
@@ -166,11 +170,16 @@ figcaption {
 /* ========== FORMS ========== */
 fieldset, input, textarea {
     margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 fieldset legend {
     font-weight: bold;
     font-size: 1.25em;
+    text-align: center;
 }
 
 label {
@@ -181,7 +190,7 @@ label {
 
 form #submit {
     display: block;
-    margin: 0 auto;
+    margin: 1rem auto;
     padding: 0.75rem 2rem;
     background-color: #1e3a8a;
     color: #ffffff;

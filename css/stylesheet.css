@@ -1,7 +1,3 @@
-/* Jonathan Caudill
-   Updated Portfolio Styles - Mobile Friendly + Modernized
-*/
-
 /* ========== CSS RESET ========== */
 * {
     margin: 0;
@@ -18,19 +14,25 @@ body {
     padding: 0;
 }
 
-img, video {
-    max-width: 90%;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 15px;
+    width: 90%;
+}
+
+video {
+    max-width: 80%;
     height: auto;
     display: block;
     margin: 1rem auto;
-}
-
-.rounded-corners {
     border-radius: 15px;
 }
 
 /* ========== HEADINGS ========== */
-h1, h3 {
+h1, h2, h3 {
     text-align: center;
     padding: 1rem;
 }
@@ -42,10 +44,9 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 2rem 0;
+    font-size: 1.75em;
+    color: #1f2937;
+    margin-top: 1rem;
 }
 
 h3 {
@@ -55,79 +56,78 @@ h3 {
     color: #374151;
 }
 
-/* ========== NAVIGATION (DEFAULT) ========== */
-nav {
-    background-color: #1e3a8a;
-    padding: 1rem 0;
+/* ========== NAVIGATION ========== */
+
+/* Hide both navs by default */
+nav.desktop,
+nav.mobile {
+    display: none;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav li {
-    display: block;
-    margin: 0.5em 0;
-}
-
-nav a {
-    display: block;
-    padding: 0.75em 1em;
-    color: #ffffff;
-    font-size: 1.25em;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #3b82f6;
-    border-radius: 5px;
-}
-
-/* Responsive horizontal nav for larger screens */
+/* Desktop Nav (768px and up) */
 @media (min-width: 768px) {
-    nav li {
+    nav.desktop {
+        display: block;
+        background-color: #1e3a8a;
+        padding: 1rem 0;
+    }
+
+    nav.desktop ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    nav.desktop li {
         display: inline-block;
         margin: 0 1em;
     }
 
-    nav a {
-        font-size: 1.1em;
-        padding: 0.5em 1em;
+    nav.desktop a {
+        font-size: 1.2em;
+        padding: 0.75em 1.5em;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    nav.desktop a:hover {
+        background-color: #3b82f6;
+        border-radius: 5px;
     }
 }
 
-/* ========== MOBILE NAVIGATION (class="mobile") ========== */
-nav.mobile {
-    background-color: #1e3a8a;
-    padding: 2rem 0;
-}
+/* Mobile Nav (less than 768px) */
+@media (max-width: 767px) {
+    nav.mobile {
+        display: block;
+        background-color: #1e3a8a;
+        padding: 1.25rem 0;
+    }
 
-nav.mobile ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-}
+    nav.mobile ul {
+        list-style: none;
+        text-align: center;
+    }
 
-nav.mobile li {
-    margin: 1rem 0;
-}
+    nav.mobile li {
+        margin: 1em 0;
+    }
 
-nav.mobile a {
-    display: block;
-    padding: 1.25em 2em;
-    font-size: 1.75em;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
+    nav.mobile a {
+        display: block;
+        padding: 1em;
+        font-size: 1.5em;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
 
-nav.mobile a:hover {
-    background-color: #3b82f6;
-    border-radius: 10px;
+    nav.mobile a:hover {
+        background-color: #3b82f6;
+        border-radius: 5px;
+    }
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -243,6 +243,26 @@ form #submit:hover {
     background-color: #3b82f6;
 }
 
+/* ========== TABLE STYLING ========== */
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* Make table text larger on mobile */
+@media (max-width: 767px) {
+    table th, table td {
+        font-size: 1.25em;
+    }
+}
+
 /* ========== FOOTER ========== */
 footer {
     text-align: center;
@@ -259,25 +279,4 @@ footer a {
 
 footer a:hover {
     color: #3b82f6;
-}
-
-/* ========== PRICE TABLE STYLING ========== */
-.prices-table td,
-.prices-table th {
-    font-size: 1.25em;
-    text-align: center;
-    padding: 0.75em;
-}
-
-@media (max-width: 767px) {
-    .prices-table td,
-    .prices-table th {
-        font-size: 1.5em;
-    }
-}
-
-/* ========== VIDEO SIZE TWEAK ========== */
-video {
-    max-width: 80%;
-    margin: 1.5rem auto;
 }

@@ -18,18 +18,11 @@ body {
     padding: 0;
 }
 
-img {
-    max-width: 95%;
+img, video {
+    max-width: 90%;
     height: auto;
     display: block;
-    margin: 2rem auto;
-}
-
-video {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 1.5rem auto;
+    margin: 1rem auto;
 }
 
 .rounded-corners {
@@ -48,6 +41,13 @@ h1 {
     color: #1f2937;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
 h3 {
     font-family: "Lora", serif;
     font-size: 1.2em;
@@ -55,10 +55,10 @@ h3 {
     color: #374151;
 }
 
-/* ========== NAVIGATION ========== */
+/* ========== NAVIGATION (DEFAULT) ========== */
 nav {
     background-color: #1e3a8a;
-    padding: 1.25rem 0; /* Increased padding for larger nav bar */
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -68,14 +68,14 @@ nav ul {
 
 nav li {
     display: block;
-    margin: 0.75em 0; /* More space between links */
+    margin: 0.5em 0;
 }
 
 nav a {
     display: block;
-    padding: 1em 1.25em; /* Bigger touch area */
+    padding: 0.75em 1em;
     color: #ffffff;
-    font-size: 1.5em; /* Larger font size */
+    font-size: 1.25em;
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -94,9 +94,40 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 1.25em;
-        padding: 0.75em 1em;
+        font-size: 1.1em;
+        padding: 0.5em 1em;
     }
+}
+
+/* ========== MOBILE NAVIGATION (class="mobile") ========== */
+nav.mobile {
+    background-color: #1e3a8a;
+    padding: 2rem 0;
+}
+
+nav.mobile ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav.mobile li {
+    margin: 1rem 0;
+}
+
+nav.mobile a {
+    display: block;
+    padding: 1.25em 2em;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav.mobile a:hover {
+    background-color: #3b82f6;
+    border-radius: 10px;
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -140,7 +171,7 @@ main h3 {
 figure {
     border: 4px solid #1e293b;
     box-shadow: 6px 6px 10px rgba(100, 116, 139, 0.2);
-    max-width: 95%;
+    max-width: 90%;
     margin: 2rem auto;
     text-align: center;
 }
@@ -228,4 +259,25 @@ footer a {
 
 footer a:hover {
     color: #3b82f6;
+}
+
+/* ========== PRICE TABLE STYLING ========== */
+.prices-table td,
+.prices-table th {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0.75em;
+}
+
+@media (max-width: 767px) {
+    .prices-table td,
+    .prices-table th {
+        font-size: 1.5em;
+    }
+}
+
+/* ========== VIDEO SIZE TWEAK ========== */
+video {
+    max-width: 80%;
+    margin: 1.5rem auto;
 }

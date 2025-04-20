@@ -126,14 +126,16 @@ nav.mobile {
     }
 
     nav.mobile a {
-        display: inline-block;
-        padding: 1em;
-        font-size: 1.2em;
-        color: #ffffff;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
+    display: inline-block;
+    padding: 1em;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
 
     nav.mobile a:hover {
         background-color: #3b82f6;

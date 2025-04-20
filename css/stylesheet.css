@@ -18,11 +18,18 @@ body {
     padding: 0;
 }
 
-img, video {
-    max-width: 90%;
+img {
+    max-width: 95%;
     height: auto;
     display: block;
-    margin: 1rem auto;
+    margin: 2rem auto;
+}
+
+video {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
 }
 
 .rounded-corners {
@@ -51,7 +58,7 @@ h3 {
 /* ========== NAVIGATION ========== */
 nav {
     background-color: #1e3a8a;
-    padding: 1rem 0;
+    padding: 1.25rem 0; /* Increased padding for larger nav bar */
 }
 
 nav ul {
@@ -61,14 +68,14 @@ nav ul {
 
 nav li {
     display: block;
-    margin: 0.5em 0;
+    margin: 0.75em 0; /* More space between links */
 }
 
 nav a {
     display: block;
-    padding: 0.75em 1em;
+    padding: 1em 1.25em; /* Bigger touch area */
     color: #ffffff;
-    font-size: 1.25em;
+    font-size: 1.5em; /* Larger font size */
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -87,8 +94,8 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 1.1em;
-        padding: 0.5em 1em;
+        font-size: 1.25em;
+        padding: 0.75em 1em;
     }
 }
 
@@ -133,7 +140,7 @@ main h3 {
 figure {
     border: 4px solid #1e293b;
     box-shadow: 6px 6px 10px rgba(100, 116, 139, 0.2);
-    max-width: 90%;
+    max-width: 95%;
     margin: 2rem auto;
     text-align: center;
 }

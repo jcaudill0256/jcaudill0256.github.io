@@ -20,7 +20,7 @@ img {
     display: block;
     margin: 1.5rem auto;
     border-radius: 15px;
-    width: 90%;
+    width: 90%; /* Default image width for smaller screens */
 }
 
 video {
@@ -108,14 +108,17 @@ nav.mobile {
     nav.mobile ul {
         list-style: none;
         text-align: center;
+        display: flex;
+        justify-content: space-evenly;  /* This aligns items left to right */
+        padding: 0;
     }
 
     nav.mobile li {
-        margin: 1em 0;
+        margin: 0;  /* Remove vertical spacing */
     }
 
     nav.mobile a {
-        display: block;
+        display: inline-block;
         padding: 1em;
         font-size: 1.5em;
         color: #ffffff;
@@ -279,4 +282,20 @@ footer a {
 
 footer a:hover {
     color: #3b82f6;
+}
+
+/* ========== IMAGES ========== */
+
+/* For larger screens, resize images */
+@media (min-width: 768px) {
+    img {
+        width: 70%; /* Adjust image size to 70% of the container width */
+    }
+}
+
+/* For extra large screens like laptops/desktops, scale it even smaller */
+@media (min-width: 1024px) {
+    img {
+        width: 60%; /* Adjust image size to 60% of the container width */
+    }
 }

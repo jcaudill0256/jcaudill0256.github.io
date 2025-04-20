@@ -20,7 +20,7 @@ img {
     display: block;
     margin: 1.5rem auto;
     border-radius: 15px;
-    width: 90%; /* Default image width for smaller screens */
+    width: 100%; /* Make sure the images take up 100% of the container width */
 }
 
 video {
@@ -109,7 +109,7 @@ nav.mobile {
         list-style: none;
         text-align: center;
         display: flex;
-        justify-content: space-evenly;  /* This aligns items left to right */
+        justify-content: space-around;  /* Align items left to right */
         padding: 0;
     }
 
@@ -120,7 +120,7 @@ nav.mobile {
     nav.mobile a {
         display: inline-block;
         padding: 1em;
-        font-size: 1.5em;
+        font-size: 1.2em; /* Slightly smaller font size for mobile */
         color: #ffffff;
         font-weight: bold;
         text-decoration: none;

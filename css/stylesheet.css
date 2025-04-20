@@ -20,9 +20,20 @@ img {
     display: block;
     margin: 1.5rem auto;
     border-radius: 15px;
-    width: 100%; /* Make sure the images take up 100% of the container width */
+    width: 100%;
 }
 
+/* Optional: Specific home page image class */
+.home-img {
+    width: 100%;
+}
+
+/* ========== NEW: Add space below mobile nav to prevent overlap ========== */
+body {
+    padding-bottom: 4rem;
+}
+
+/* ========== REMAINS THE SAME ========== */
 video {
     max-width: 80%;
     height: auto;
@@ -31,7 +42,6 @@ video {
     border-radius: 15px;
 }
 
-/* ========== HEADINGS ========== */
 h1, h2, h3 {
     text-align: center;
     padding: 1rem;
@@ -57,8 +67,6 @@ h3 {
 }
 
 /* ========== NAVIGATION ========== */
-
-/* Hide both navs by default */
 nav.desktop,
 nav.mobile {
     display: none;
@@ -109,18 +117,18 @@ nav.mobile {
         list-style: none;
         text-align: center;
         display: flex;
-        justify-content: space-around;  /* Align items left to right */
+        justify-content: space-around;
         padding: 0;
     }
 
     nav.mobile li {
-        margin: 0;  /* Remove vertical spacing */
+        margin: 0;
     }
 
     nav.mobile a {
         display: inline-block;
         padding: 1em;
-        font-size: 1.2em; /* Slightly smaller font size for mobile */
+        font-size: 1.2em;
         color: #ffffff;
         font-weight: bold;
         text-decoration: none;
@@ -286,16 +294,24 @@ footer a:hover {
 
 /* ========== IMAGES ========== */
 
-/* For larger screens, resize images */
+/* Resize for tablets and small laptops */
 @media (min-width: 768px) {
     img {
-        width: 70%; /* Adjust image size to 70% of the container width */
+        width: 60%;
+    }
+
+    .home-img {
+        width: 50%;
     }
 }
 
-/* For extra large screens like laptops/desktops, scale it even smaller */
+/* Resize for desktops and larger */
 @media (min-width: 1024px) {
     img {
-        width: 60%; /* Adjust image size to 60% of the container width */
+        width: 40%;
+    }
+
+    .home-img {
+        width: 35%;
     }
 }

@@ -110,35 +110,32 @@ nav.mobile {
     nav.mobile {
         display: block;
         background-color: #1e3a8a;
-        padding: 1.25rem 0;
-        overflow-x: auto;
+        padding: 1rem 0;
     }
 
     nav.mobile ul {
         list-style: none;
+        text-align: center;
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        padding: 0 1rem;
+        justify-content: center;
+        flex-wrap: nowrap; /* Force single line */
+        padding: 0;
         margin: 0;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
     nav.mobile li {
-        margin-right: 1rem;
-        flex: 0 0 auto; /* Prevents shrinking */
+        margin: 0 0.25rem; /* smaller gap between items */
     }
 
     nav.mobile a {
         display: inline-block;
-        padding: 0.75rem 1rem;
-        font-size: 1.2em;
+        padding: 0.5rem 0.75rem; /* reduced padding */
+        font-size: 1em; /* slightly smaller text */
         color: #ffffff;
         font-weight: bold;
         text-decoration: none;
-        white-space: nowrap;
         transition: background-color 0.3s ease;
+        white-space: nowrap; /* prevent wrapping inside link */
     }
 
     nav.mobile a:hover {
@@ -146,6 +143,7 @@ nav.mobile {
         border-radius: 5px;
     }
 }
+
 /* ========== MAIN CONTENT ========== */
 main {
     padding: 2rem;

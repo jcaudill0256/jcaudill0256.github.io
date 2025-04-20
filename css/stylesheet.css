@@ -111,38 +111,41 @@ nav.mobile {
         display: block;
         background-color: #1e3a8a;
         padding: 1.25rem 0;
+        overflow-x: auto;
     }
 
     nav.mobile ul {
         list-style: none;
-        text-align: center;
         display: flex;
-        justify-content: space-around;
-        padding: 0;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0 1rem;
+        margin: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     nav.mobile li {
-        margin: 0;
+        margin-right: 1rem;
+        flex: 0 0 auto; /* Prevents shrinking */
     }
 
     nav.mobile a {
-    display: inline-block;
-    padding: 1em;
-    font-size: 1.2em;
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        font-size: 1.2em;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.3s ease;
+    }
 
     nav.mobile a:hover {
         background-color: #3b82f6;
         border-radius: 5px;
     }
 }
-
 /* ========== MAIN CONTENT ========== */
 main {
     padding: 2rem;

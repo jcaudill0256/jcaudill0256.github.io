@@ -306,12 +306,13 @@ footer a:hover {
 }
 
 /* Resize for desktops and larger */
+/* Resize for desktops and larger */
 @media (min-width: 1024px) {
     img {
-        width: 40%;
+        width: 450px;
     }
 
     .home-img {
-        width: 35%;
+        width: 450px;
     }
 }
